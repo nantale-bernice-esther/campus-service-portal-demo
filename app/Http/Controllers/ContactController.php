@@ -15,6 +15,28 @@ class ContactController extends Controller
         //
     }
 
+    //this function is for  the contact session apparently we dont have pages
+     public function contact()
+    {
+        //
+        return view('contact');
+    }
+
+
+
+
+
+
+
+    //this function is for the contact-list view
+    //function names are written in camel case
+    // dont separate with minus or underscore
+     public function contactList()
+    {
+        //
+        return view('contact-list');
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -45,7 +67,7 @@ class ContactController extends Controller
         return redirect()->back()->with('Success', 'Your message has been sent successfully');
 
     }
-
+  
     /**
      * Display the specified resource.
      */

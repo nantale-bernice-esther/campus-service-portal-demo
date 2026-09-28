@@ -24,7 +24,11 @@ Route::get('/', [HomeController::class, 'index']) ->name('index');
 //use which means the same thing but its not a variable to store changing data 
 //[HomeController::class, 'contact']- means go the homecontroller file and run the function for this page
 
-Route::get('/contact', [HomeController::class, 'contact']) ->name('contact');
+Route::get('/contact', [ContactController::class, 'contact']) ->name('contact');
 //need to update contact form with the route nickname for the form action
 //rouTES
 Route::post('/store', [ContactController::class, 'store']) ->name('contact.store');
+
+//creating the route for the contact-list page
+
+Route::get('/contact-list', [ContactController::class, 'contactList']) ->name('contact-list');
